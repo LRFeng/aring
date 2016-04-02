@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aring.mapper.UserMapper">
+    <resultMap type="com.aring.bean.User" id="user">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="CHAR"/>
+        <result column="password" property="password" jdbcType="CHAR"/>
+    </resultMap>
+    
+    <insert id="add" parameterType="com.aring.bean.User">
+        insert into user (name,password) value (#{name},#{password});
+    </insert>
+    
+    <select id="selectByName" resultMap="user" parameterType="java.lang.String">
+        select * from user where name = #{name};
+    </select>
+     
+    <select id="selectById" resultMap="user" parameterType="java.lang.Integer">
+        select * from user where id = #{id};
+    </select>
+    
+</mapper>
