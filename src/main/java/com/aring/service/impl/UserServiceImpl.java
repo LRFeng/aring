@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService{
 	
 	
 	@Override
-	public UserVo login() {
+	public UserVo login(User user) {
 		// TODO Auto-generated method stub
 		return null;
 	}

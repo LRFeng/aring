@@ -142,5 +142,14 @@
 		</dependency>
 <!-- ———————————————————————————— end ———————————————————————— -->
 
+<!-- ———————————————————————————— 数据校验 依赖 ———————————————————————— -->
+<dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate-validator</artifactId>
+	<version>5.3.0.Alpha1</version>
+</dependency>
+<!-- ———————————————————————————— end ———————————————————————— -->
+
+
   </dependencies>
 </project>
