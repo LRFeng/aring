@@ -1,5 +1,7 @@
 package com.aring.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,5 +23,10 @@ public class UserController extends BaseController{
 		return	userService.getUserInfo(id);	
 	}
 	
+	@RequestMapping(value="websocket.do",method=RequestMethod.GET)
+	public String websocket(String username, HttpServletRequest request){
+		request.getSession().setAttribute("WEBSOCKET_USERNAME", username);
+		return "websocket";
+	}
 	
 }

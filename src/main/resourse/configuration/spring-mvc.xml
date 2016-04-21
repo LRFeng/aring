@@ -24,7 +24,7 @@
     <!-- 配置视图解析器  -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
-        <property name="prefix" value="page/"></property><!-- 资源路径 -->
+        <property name="prefix" value="/page/"></property><!-- 资源路径 -->
         <property name="suffix" value=".html"></property> <!-- 资源名后缀 -->
     </bean>
     
